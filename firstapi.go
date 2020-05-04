@@ -50,7 +50,7 @@ func createNewArticle(w http.ResponseWriter, r *http.Request) {
 }
 func handleRequests() {
 	myRouter := mux.NewRouter().StrictSlash(true)
-	// replace http.HandleFunc with myRouter.HandleFunc
+	// replace http.HandleFunc with myRouter.HandleFunc later
 	myRouter.HandleFunc("/", homepage)
 	myRouter.HandleFunc("/all", returnAllArticles)
 	myRouter.HandleFunc("/article", createNewArticle).Methods("POST")
